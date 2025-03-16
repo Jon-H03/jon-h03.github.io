@@ -1,0 +1,69 @@
+/* Experience.css - Updated for dark theme */
+.experience-item {
+  position: relative;
+  margin-bottom: var(--space-xl);
+  border-left: 2px solid var(--primary);
+  padding-left: calc(var(--space-lg) + 8px); /* Adjusted padding */
+}
+
+
+
+.title-date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.title-date-container h3 {
+  margin-bottom: 0;
+  margin-right: var(--space-md);
+  color: #F1F5F9;
+}
+
+.date {
+  color: #CBD5E1; /* Soft gray for date text */
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  background-color: rgba(96, 165, 250, 0.15); /* Semi-transparent blue background */
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 4px;
+}
+
+.experience-item h4 {
+  color: var(--primary-light); /* Lighter blue for company names */
+  margin-bottom: var(--space-md);
+}
+
+.experience-item ul {
+  padding-left: 0; /* Remove default padding */
+  list-style-position: inside; /* Keep bullets inside */
+  list-style-type: disc;
+}
+
+.experience-item li {
+  margin-bottom: var(--space-sm);
+  color: #CBD5E1; /* Soft gray for list items */
+  text-indent: -1.5em; /* Pull the text back */
+  padding-left: 1.5em; /* Add padding to compensate */
+}
+
+/* This fixes the disc alignment issue */
+.experience-item li::marker {
+  color: var(--primary-light); /* Make bullets light blue */
+}
+
+@media (max-width: 768px) {
+  .title-date-container {
+    flex-direction: column;
+  }
+  
+  .title-date-container h3 {
+    margin-bottom: var(--space-xs);
+  }
+  
+  .date {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,58 @@
+/* Certification.css */
+#certifications {
+    padding-bottom: 50rem; /* Adds 4rem of padding at the bottom */
+  }
+
+#certifications ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#certifications li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+#certifications li:last-of-type {
+  margin-bottom: 0;
+}
+
+.degree {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#certifications h2 {
+  font-size: 2.5em;
+  color: #f1f5f9;
+}
+
+#certifications h3 {
+  margin: 0;
+  color: #f1f5f9;
+  font-size: 1.25rem;
+}
+
+#certifications .date {
+  font-style: italic;
+  display: inline-block;
+  background-color: rgba(96, 165, 250, 0.15);
+  color: #cbd5e1;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .degree {
+    flex-direction: column;
+  }
+
+  #certifications .date {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+}

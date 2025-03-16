@@ -1,0 +1,79 @@
+/* Education CSS - Updated for dark theme */
+#education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#education li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: var(--space-md); 
+}
+
+#education li:first-of-type {
+  padding-bottom: 1.5em;
+}
+
+#education li:last-of-type {
+  padding-bottom: 30em;
+}
+
+.degree {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#education h2 {
+  font-size: 2.5em;
+  color: #F1F5F9; /* Light color for section heading */
+}
+
+#education h3 {
+  margin: 0;
+  color: #F1F5F9; /* Off-white for degree names as requested */
+  font-size: 1.25rem;
+}
+
+#education h4 {
+  font-weight: normal;
+  margin-top: 5px;
+  color: var(--primary-light); /* Light blue for university names */
+  font-size: 1.4rem; /* Made university names bigger */
+}
+
+#education .date {
+  font-style: italic;
+  display: inline-block;
+  background-color: rgba(96, 165, 250, 0.15); /* Semi-transparent blue */
+  color: #CBD5E1; /* Soft gray text */
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+#education p {
+  margin: 0.25em;
+  color: #CBD5E1; /* Soft gray for paragraphs */
+}
+
+#education p:first-of-type {
+  font-weight: 500;
+  color: #F1F5F9; /* Lighter color for GPA */
+}
+
+@media (max-width: 768px) {
+  #education li {
+    padding-left: var(--space-lg);
+  }
+  
+  .degree {
+    flex-direction: column;
+  }
+  
+  #education .date {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+}

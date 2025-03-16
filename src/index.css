@@ -1,0 +1,134 @@
+/* index.css */
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+:root {
+  --font-family: 'Merriweather', Georgia, serif;
+  --dark-bg: #2D3748;      /* Main dark background */
+  --darker-bg: #1A202C;    /* Darker sections */
+  --lightest-text: #FFFFFF;
+  --light-text: #E5E7EB;
+  --medium-text: #A0AEC0;
+  --primary: #60A5FA;      /* Light blue */
+  --primary-hover: #93C5FD;
+  
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--light-text);
+  background-color: var(--dark-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply font to all text elements explicitly */
+body, h1, h2, h3, h4, h5, h6, p, span, div, li, a {
+  font-family: 'Merriweather', Georgia, serif !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+}
+
+/* Container for centering content */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Basic section styling */
+.section {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: var(--darker-bg);
+}
+
+.section-alt {
+  background-color: var(--dark-bg);
+}
+
+/* Heading styles */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--lightest-text);
+}
+
+/* Link styles */
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Button styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary);
+  color: var(--lightest-text);
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Remove the light mode specific styles */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--light-text);
+    background-color: var(--dark-bg);
+  }
+  
+  a:hover {
+    color: var(--primary-hover);
+  }
+  
+  button {
+    background-color: var(--primary);
+  }
+}
+
+/* Make sure form elements and inputs are also styled correctly */
+input, textarea, select {
+  background-color: var(--darker-bg);
+  color: var(--light-text);
+  border: 1px solid var(--medium-text);
+}
+
+/* Code blocks or pre elements if you have any */
+pre, code {
+  background-color: var(--darker-bg);
+  color: var(--light-text);
+}

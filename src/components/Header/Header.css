@@ -1,0 +1,109 @@
+/* Header.css */
+.header {
+  background-color: rgba(26, 32, 44, 0.98); 
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F1F5F9; 
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #CBD5E1; 
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #60A5FA; 
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #60A5FA; 
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #CBD5E1; 
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 72px; 
+    left: 0;
+    width: 100%;
+    background-color: rgba(26, 32, 44, 0.98); 
+    backdrop-filter: blur(10px);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav.active {
+    max-height: 300px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-link {
+    padding: 0.8rem 0;
+    display: block;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+}
